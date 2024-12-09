@@ -34,6 +34,14 @@ $ pnpm install
 
 ## Compile and run the project
 
+## Run migration
+```bash
+npm run migration:run
+
+# seed
+pnpm run db:seed
+```
+
 ```bash
 # development
 $ pnpm run start
