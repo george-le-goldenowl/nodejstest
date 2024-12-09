@@ -1,8 +1,9 @@
 import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSource, DataSourceOptions } from 'typeorm';
+import { config as dotenvConfig } from 'dotenv';
 
+dotenvConfig({ path: '.env' });
 const configService = new ConfigService();
-
 const config = {
   type: 'postgres',
   host: configService.get<string>('DB_HOST'),
@@ -10,6 +11,7 @@ const config = {
   username: configService.get<string>('DB_USERNAME'),
   password: configService.get<string>('DB_PASSWORD'),
   database: configService.get<string>('DB_NAME'),
+  dabaseUrl: configService.get<string>('DATABASE_URL'),
   synchronize: false,
   logging: configService.get<boolean>('DB_LOGGING'),
   entities: ['dist/**/*.entity{.ts,.js}'],
