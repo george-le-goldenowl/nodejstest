@@ -37,7 +37,7 @@ const EnvSchema = {
       useFactory: async (configService: ConfigService) =>
         configService.get('typeorm'),
     }),
-    // ScheduleModule.forRoot(),
+    ScheduleModule.forRoot(),
     ScheduleModuleJob,
     PipedreamModule,
     QueueModule,
