@@ -44,13 +44,13 @@ Workers are responsible for handling background tasks such as job processing, lo
 - To monitor the status and logs of the worker
 
   ```bash
-  pnpm start:watch
+  pnpm worker:watch
   ```
 
 - To stop and delete the worker
 
   ```bash
-  pnpm start:delete
+  pnpm worker:delete
   ```
 
 ### Environments
