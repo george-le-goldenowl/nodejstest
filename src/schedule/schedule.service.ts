@@ -19,7 +19,7 @@ export class ScheduleService extends ScheduleServiceAbstract {
     super();
   }
 
-  @Cron(CronExpression.EVERY_30_SECONDS)
+  @Cron(CronExpression.EVERY_HOUR)
   async handleCron(): Promise<void> {
     try {
       console.log('Cron job started at:', new Date());

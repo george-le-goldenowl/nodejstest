@@ -31,7 +31,7 @@ import { PipedreamModule } from '../../src/pipedream/pipedream.module';
     WorkerProcessor,
     {
       provide: 'IBirthdayJobHandler',
-      useClass: SaveLogBirthdayJob,
+      useClass: SaveLogBirthdayJob, // replace task if neccessary
     },
   ],
   exports: [QueueService],
