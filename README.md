@@ -1,3 +1,20 @@
+# Notes
+
+## Future Improvements
+
+Due to time constraints, the following enhancements have not been implemented but are recommended for future development:
+
+- Dynamic Cron Schedule: add an interface or configuration file to allow dynamic updates to the schedule without modifying the codebase.
+- Tracking run job: create mesasge_logs table and save run jobs, for case redis is down. It will be easy when we want to restart job without duplicate problem
+
+  ```code
+  WHERE mesasge_logs.user_id = u.id
+    AND mesasge_logs.send_date = CURRENT_DATE
+    AND mesasge_logs.status = 'sent'
+  ```
+
+- Cleanup data: in case the data is not needed (no need to check any metrics anymore), after 1 month I can delete those messages by running a monthly cron task.
+
 # Project Documentation
 
 ## Preinstallation
