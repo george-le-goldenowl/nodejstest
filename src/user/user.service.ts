@@ -21,11 +21,15 @@ export class UserService {
     });
   }
 
+  create(createUserDto: UpdateUserDto) {
+    return this.userRepository.save(createUserDto);
+  }
+
   update(id: number, updateUserDto: UpdateUserDto) {
     return this.userRepository.update(id, updateUserDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    return this.userRepository.delete(id);
   }
 }
