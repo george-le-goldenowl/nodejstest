@@ -11,6 +11,6 @@ export default {
   entities: [User],
   synchronize: true,
   logging: false,
-  seeds: ['src/db/seeding/seeds/**/*{.ts,.js}'],
-  factories: ['src/db/seeding/factories/**/*{.ts,.js}'],
+  seeds: ['src/database/seeding/seeds/**/*{.ts,.js}'],
+  factories: ['src/database/seeding/factories/**/*{.ts,.js}'],
 };

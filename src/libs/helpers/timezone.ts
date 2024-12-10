@@ -10,13 +10,15 @@ export function getCurrentTimeByLocation({ city }: TTimeZoneByLocation) {
   const cityInfo = findFromCityStateProvince(city);
 
   if (!cityInfo || !cityInfo.length) {
-    throw new Error(`Invalid location: ${city}`);
+    console.log(`Invalid location: ${city}`);
+    return;
   }
 
   const timezone = cityInfo[0].timezone;
 
   if (!moment.tz.zone(timezone)) {
-    throw new Error(`Invalid timezone: ${timezone}`);
+    console.log(`Invalid timezone: ${timezone}`);
+    return;
   }
 
   return timezone;
