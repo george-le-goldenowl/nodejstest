@@ -15,15 +15,13 @@
 
 ## Initialize
 
-````
-
 ### Migrations
 
 Run the database migrations with the following command:
 
 ```bash
 pnpm migration:run
-````
+```
 
 ### Data Seeding
 
@@ -122,4 +120,8 @@ At the moment, the schedule is configured to run every hour. You can easily upda
 
 ```code
 @Cron(CronExpression.EVERY_HOUR) // Replace schedule if necessary
+```
+
+```
+
 ```
