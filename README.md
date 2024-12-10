@@ -15,6 +15,11 @@ Due to time constraints, the following enhancements have not been implemented bu
 
 - Cleanup data: in case the data is not needed (no need to check any metrics anymore), after 1 month I can delete those messages by running a monthly cron task.
 
+## Demo
+
+Worker
+https://drive.google.com/file/d/1Ha8QwZCqX1qYt_5AJA73fJ6kVPothzG7/view?usp=sharing
+
 # Project Documentation
 
 ## Preinstallation
